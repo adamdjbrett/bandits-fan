@@ -1,0 +1,16 @@
+{
+  "name": "bandits-blog",
+  "version": "1.0.0",
+  "description": "Buffalo Bandits Lacrosse Blog",
+  "type": "module",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve"
+  },
+  "keywords": ["eleventy", "blog", "buffalo-bandits"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  }
+}

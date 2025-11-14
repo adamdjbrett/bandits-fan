@@ -1,0 +1,29 @@
+---
+layout: base.njk
+title: Home
+currentYear: 2024
+---
+
+<div class="hero">
+  <h2>Your Source for Buffalo Bandits Lacrosse</h2>
+  <p>Coverage, analysis, and passion for the greatest lacrosse team in the NLL</p>
+</div>
+
+<section class="posts-list">
+  <h2 class="section-title">Latest Posts</h2>
+
+  {% for post in collections.posts %}
+  <article class="post-preview">
+    <h3 class="post-preview-title">
+      <a href="{{ post.url }}">{{ post.data.title }}</a>
+    </h3>
+    <time class="post-preview-date" datetime="{{ post.date | dateIso }}">
+      {{ post.date | dateDisplay }}
+    </time>
+    <p class="post-preview-excerpt">
+      {{ post.templateContent | striptags | truncate(150) }}
+    </p>
+    <a href="{{ post.url }}" class="read-more">Read more →</a>
+  </article>
+  {% endfor %}
+</section>
